@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aa-1135-dotnet-api-prod
+spec:
+  project: iuv30012426
+  destination:
+    namespace: aa1135-dotnet-api-dev
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/jakoblea2/aa1135-dotnet-api.git
+    targetRevision: HEAD
+    path: k8s/overlays/production

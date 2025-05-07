@@ -1,0 +1,6 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: aa-1135-dotnet-api
+  spec:
+    minAvailable: 2
